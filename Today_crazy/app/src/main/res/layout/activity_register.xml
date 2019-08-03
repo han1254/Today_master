@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroud4"
+    android:orientation="vertical"
+    tools:context="com.nequer.android.business.account.view.RegisterActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="80dp"
+        android:text="ToDay"
+        android:textColor="@color/white"
+        android:textSize="76sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="10dp"
+        android:text="定制你的专属日历"
+        android:textColor="@color/white">
+
+    </TextView>
+
+    <LinearLayout
+        android:background="@drawable/linearlayout_round_white"
+        android:layout_width="240dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="60dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_user" />
+
+        <EditText
+            android:id="@+id/edt_rgit_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:hint="给自己取一个好名字"
+            android:textColor="@color/whitesmoke"
+            android:textColorHint="@color/whitesmoke"
+            android:textSize="12sp"
+            android:lines="1"
+
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:background="@drawable/linearlayout_round_white"
+        android:layout_width="240dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="20dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_key" />
+
+        <EditText
+            android:id="@+id/edt_rgit_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:hint="输入密码"
+            android:textColor="@color/whitesmoke"
+            android:textColorHint="@color/whitesmoke"
+            android:textSize="12sp"
+            android:lines="1"
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@drawable/linearlayout_round_white"
+        android:layout_width="240dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="20dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_key" />
+
+        <EditText
+            android:id="@+id/edt_ergit_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:hint="再输入一次密码"
+            android:textColor="@color/whitesmoke"
+            android:textColorHint="@color/whitesmoke"
+            android:textSize="12sp"
+            android:lines="1"
+            />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="240dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_round"
+        android:text="注册"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+
+</LinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/nav_group">
+        <item
+            android:id="@+id/nav_manager"
+            android:title="管理黄历"
+            android:icon="@mipmap/ic_manager">
+        </item>
+        <item
+            android:id="@+id/nav_square"
+            android:title="广场"
+            android:icon="@mipmap/ic_square">
+        </item>
+        <item
+            android:id="@+id/nav_personal_setting"
+            android:title="个人设置"
+            android:icon="@mipmap/ic_person">
+        </item>
+    </group>
+
+    <item
+        android:id="@+id/nav_exit"
+        android:title="退出"
+        android:icon="@mipmap/ic_exit">
+
+    </item>
+</menu>

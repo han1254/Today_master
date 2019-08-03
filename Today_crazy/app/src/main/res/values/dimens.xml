@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="normalToolBarhight">48dp</dimen>
+    <dimen name="search_bar_corner">12dp</dimen>
+    <dimen name="back_arrow_width">28dp</dimen>
+    <dimen name="back_arrow_height">28dp</dimen>
+    <dimen name="square_background_height">180dp</dimen>
+    <dimen name="margin_left_back_arrow">12dp</dimen>
+    <dimen name="margin_left_normal">10dp</dimen>
+    <dimen name="margin_start_normal">10dp</dimen>
+    <dimen name="margin_top_normal">4dp</dimen>
+    <dimen name="card_view_corner">8dp</dimen>
+    <dimen name="card_view_elevation">6dp</dimen>
+    <dimen name="title_icon_height">20dp</dimen>
+    <dimen name="square_title_width">80dp</dimen>
+    <dimen name="square_title_height">20dp</dimen>
+    <dimen name="square_search_box_tv_width">240dp</dimen>
+</resources>

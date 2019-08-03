@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.neuqer.android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name="com.nequer.android.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="ToDay"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name="com.nequer.android.business.manage.mvp.view.Activity.MangeCalendarActivity"></activity>
+        <activity
+            android:name="com.nequer.android.business.detail.mvp.view.DetailActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name="com.nequer.android.business.subscribe.mvp.view.SubscribeFragmentActivity" />
+        <activity android:name="com.nequer.android.business.square.mvp.view.SquareActivity" />
+        <activity android:name="com.nequer.android.business.subscribe.mvp.view.SubscribeActivity" />
+        <activity android:name="com.nequer.android.base.activity.NoBarActivity" />
+        <activity android:name="com.nequer.android.business.account.view.Main2Activity" />
+        <activity
+            android:name="com.nequer.android.business.account.view.RegisterActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.nequer.android.business.account.view.MainActivity"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

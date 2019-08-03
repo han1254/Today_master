@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.nequer.android.business.detail.fragment.CommentDialogFragment">
+
+   <EditText
+       android:id="@+id/comment_dialog_edit"
+       android:layout_width="match_parent"
+       android:layout_height="75dp"
+       android:background="@null"
+       android:gravity="top"
+       android:layout_margin="10dp"
+       android:hint="添加评论......"
+       android:textColorHint="@color/light_sky_blue"
+       android:textSize="17sp"/>
+    <ImageView
+        android:id="@+id/comment_dialog_img_photo"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_below="@+id/comment_dialog_edit"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:tint="@color/pantone"
+        android:tintMode="multiply"
+        android:src="@drawable/ic_camera"
+        />
+
+
+    <ImageView
+        android:id="@+id/image_btn_at"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_below="@id/comment_dialog_edit"
+        android:layout_toEndOf="@id/comment_dialog_img_photo"
+        android:layout_marginStart="10dp"
+        android:padding="2dp"
+        android:src="@drawable/ic_at"
+        android:tint="@color/pantone"
+        android:tintMode="multiply"/>
+
+    <ImageView
+        android:id="@+id/image_btn_comment_send"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_below="@id/comment_dialog_edit"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/ic_plane_unsend"
+        android:tint="@color/pantone"
+        android:tintMode="multiply"/>
+
+
+</RelativeLayout>

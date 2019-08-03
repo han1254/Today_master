@@ -1,0 +1,111 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.nequer.android.business.detail.fragment.CalendarCommentFragment">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/detail_comment_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/detail_comment_input">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+        <!--<LinearLayout-->
+
+            <!--android:id="@+id/detail_comment_input"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:background="@color/white"-->
+            <!--android:elevation="8dp">-->
+
+            <!--<ImageView-->
+                <!--android:layout_width="35dp"-->
+                <!--android:layout_height="35dp"-->
+                <!--android:layout_margin="10dp"-->
+                <!--android:layout_gravity="center_vertical"-->
+                <!--android:src="@drawable/ic_user"/>-->
+
+            <!--<EditText-->
+
+                <!--android:id="@+id/tv_comment_fake_button"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:hint="添加评论..."-->
+                <!--android:textColorHint="@color/green"-->
+                <!--android:textSize="12sp"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:maxLines="6"-->
+                <!--android:maxHeight="72dp"-->
+                <!--android:ellipsize="end"/>-->
+        <!--</LinearLayout>-->
+
+    <RelativeLayout
+        android:id="@+id/detail_comment_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+           <EditText
+               android:id="@+id/detail_comment_edit"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:background="@null"
+               android:gravity="top"
+               android:layout_margin="10dp"
+               android:maxHeight="80dp"
+               android:hint="添加评论......"
+               android:textColorHint="@color/light_sky_blue"
+               android:textSize="17sp"/>
+
+        <ImageView
+            android:id="@+id/detail_comment_photo"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_below="@+id/detail_comment_edit"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"
+            android:tint="@color/pantone"
+            android:tintMode="multiply"
+            android:src="@drawable/ic_camera"
+            />
+
+
+        <ImageView
+            android:id="@+id/image_btn_at"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_below="@id/detail_comment_edit"
+            android:layout_toEndOf="@id/detail_comment_photo"
+            android:layout_marginStart="10dp"
+            android:padding="2dp"
+            android:src="@drawable/ic_at"
+            android:tint="@color/pantone"
+            android:tintMode="multiply"/>
+
+        <ImageView
+            android:layout_below="@id/detail_comment_edit"
+            android:id="@+id/detail_comment_send"
+            android:clickable="true"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/ic_plane_unsend"
+            android:tint="@color/pantone"
+            android:tintMode="multiply"/>
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

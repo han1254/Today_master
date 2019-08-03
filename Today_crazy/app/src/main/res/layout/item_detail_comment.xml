@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="8dp"
+    android:background="@color/white">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        app:cardCornerRadius="8dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_marginTop="4dp"
+                android:id="@+id/item_detail_comment_image_user_avatar"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="16dp"
+                android:src="@drawable/ic_launcher_background"/>
+            <TextView
+                android:id="@+id/item_detail_comment_txt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NAME"
+                android:layout_toRightOf="@id/item_detail_comment_image_user_avatar"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:id="@+id/item_detail_comment_txt_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2019-04-26 16:45:05"
+                android:textSize="12sp"
+                android:layout_below="@+id/item_detail_comment_txt_name"
+                android:layout_toRightOf="@id/item_detail_comment_image_user_avatar"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/red"/>
+
+
+            <RelativeLayout
+                android:id="@+id/item_detail_relative_info"
+                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/item_detail_comment_image_user_avatar"
+                android:layout_below="@+id/item_detail_comment_txt_time"
+                android:layout_marginLeft="10dp">
+
+                <ImageView
+
+                    android:id="@+id/item_detail_comment_image_delta"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="4dp"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_delta"/>
+
+                <TextView
+                    android:layout_marginTop="4dp"
+                    android:id="@+id/item_comment_txt_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/item_detail_comment_image_delta"
+                    android:layout_marginLeft="4dp"
+                    android:textColor="@color/primary_dark"
+                    android:text="我jio着这个黄历不错!"
+                    />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_below="@id/item_detail_relative_info"
+                android:layout_toRightOf="@id/item_detail_comment_image_user_avatar"
+                android:background="@color/pantone">
+
+            </View>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>
