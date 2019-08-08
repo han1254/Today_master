@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.nequer.android.business.manage.mvp.view.Activity.ToCreateActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="4dp"
+        android:outlineProvider="background"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/to_create_img_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/icon_arrow_left"
+            android:layout_centerVertical="true"
+            android:paddingStart="10dp"
+            />
+
+        <TextView
+            android:id="@+id/to_create_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="黄历描述"
+            android:textSize="24sp"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/to_create_tv_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="下一步"
+            android:layout_centerVertical="true"
+            android:paddingEnd="10dp"/>
+    </RelativeLayout>
+    <FrameLayout
+        android:id="@+id/to_create_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+</LinearLayout>

@@ -175,7 +175,7 @@ public class CalendarCommentFragment extends BasePresenterFragment<ICommentFragm
         ToastUtil.showToast("评论成功！");
 
 
-       mCommentAdapter.removeAllItem();
+        mCommentAdapter.removeAllItem();
         page = 1;
         isLastPge = false;
         mCommentAdapter.refresh();

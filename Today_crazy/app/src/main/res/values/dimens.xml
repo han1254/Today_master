@@ -15,4 +15,5 @@
     <dimen name="square_title_width">80dp</dimen>
     <dimen name="square_title_height">20dp</dimen>
     <dimen name="square_search_box_tv_width">240dp</dimen>
+    <dimen name="product_grid_expected_size">72dp</dimen>
 </resources>

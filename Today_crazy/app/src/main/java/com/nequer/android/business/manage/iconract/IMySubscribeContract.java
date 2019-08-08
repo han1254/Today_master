@@ -9,9 +9,13 @@ public interface IMySubscribeContract {
     interface  View extends IBaseContract.IBaseView{
         void onGetSubscribeSucceed(List<CalendarModel> list);
         void onGetSubscribeFailed();
+
+        void onUnSubscribeSucceed();
+
     }
 
     interface Presenter extends IBaseContract.IBasePresenter{
         void getSubscribe();
+        void unSubscribe(int id);
     }
 }

@@ -4,6 +4,9 @@
     package="com.neuqer.android">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
 
     <application
         android:name="com.nequer.android.App"
@@ -13,7 +16,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name="com.nequer.android.business.manage.mvp.view.Activity.MangeCalendarActivity"></activity>
+        <activity android:name="com.nequer.android.business.manage.mvp.view.Activity.ToCreateActivity"></activity>
+        <activity android:name="com.nequer.android.business.manage.mvp.view.Activity.MangeCalendarActivity" />
         <activity
             android:name="com.nequer.android.business.detail.mvp.view.DetailActivity"
             android:windowSoftInputMode="adjustResize" />

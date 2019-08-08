@@ -39,40 +39,35 @@ public class MyCreateAdapter extends BaseRecyclerViewAdapter<MyCreateModel>{
         viewHolder.getItemView().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mOnItemClickListener.OnClick(position);
+                mOnItemClickListener.OnClick(position,item.getId());
             }
         });
 
         mLinearEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mOnViewContralClickListener.OnViewClick(position,type);
+                mOnViewContralClickListener.OnViewClick(position,type,item.getId());
             }
         });
 
-//        mLinearDele.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                mOnViewContralClickListener.OnViewClick(position,type);
-//            }
-//        });
+
         mLinearDele.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mOnDleClickListener.OnDeleClick(position,type);
+                mOnDleClickListener.OnDeleClick(position,type,item.getId());
             }
         });
     }
 
     public interface onItemClickListener{
-        void OnClick(int position);
+        void OnClick(int position,int id);
     }
     public interface onViewControlClickListener{
-        void OnViewClick(int position,int type);
+        void OnViewClick(int position,int type,int id);
     }
 
     public interface onDeleClickListener{
-        void OnDeleClick(int postion, int type);
+        void OnDeleClick(int postion, int type,int id);
     }
     public void setOnItemClickListener(onItemClickListener listener){
         mOnItemClickListener = listener;

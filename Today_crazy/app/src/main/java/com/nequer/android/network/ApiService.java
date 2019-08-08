@@ -8,6 +8,7 @@ import com.nequer.android.business.account.model.response.LoginRspModel;
 import com.nequer.android.business.detail.mvp.model.DetailCommentModel;
 import com.nequer.android.business.detail.mvp.model.DetailModel;
 import com.nequer.android.business.manage.mvp.model.MyCreateModel;
+import com.nequer.android.business.manage.mvp.model.ToCreateCalendarModel;
 import com.nequer.android.business.square.mvp.model.SquareItem;
 import com.nequer.android.business.subscribe.mvp.model.CalendarModel;
 import com.neuqer.android.network.response.ApiResponse;
@@ -16,6 +17,7 @@ import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.DELETE;
 import retrofit2.http.GET;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
@@ -65,4 +67,16 @@ public interface ApiService {
     //获得自己创建的黄历
     @GET("custom/created")
     Call<ApiResponse<List<MyCreateModel>>>getMyCreateCalendar();
+
+    //获取七牛图片token
+    @GET("custom/upload/token")
+    Call<ApiResponse<String>> getPicsToken();
+
+    @POST("custom/new")
+    Call<ApiResponse<Long>> toCreateCalendar(@Body ToCreateCalendarModel model);
+
+
+    //删除
+    @DELETE("custom/{calendarId}")
+    Call<ApiResponse<Long>> deleteCalendar(@Path("calendarId") int calendarId);
 }

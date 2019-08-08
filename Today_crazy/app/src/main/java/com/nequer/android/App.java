@@ -3,16 +3,22 @@ package com.nequer.android;
 import android.app.Activity;
 import android.app.Application;
 import android.content.Intent;
+import android.media.audiofx.DynamicsProcessing;
 import android.os.Bundle;
 
 
 import com.nequer.android.business.account.model.UserInfo;
 import com.nequer.android.business.account.view.MainActivity;
+import com.nequer.android.common.Config;
 import com.nequer.android.utils.CacheUtil;
 import com.nequer.android.utils.ToastUtil;
+import com.qiniu.android.common.FixedZone;
+import com.qiniu.android.storage.Configuration;
+import com.qiniu.android.storage.UploadManager;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @author YangZhaoxin.
@@ -21,6 +27,10 @@ import java.util.List;
  */
 
 public class App extends Application {
+
+    private String cachePath;
+
+    private UploadManager uploadManager;
 
     private static final long EXIT_TIME = 2000;
 
@@ -34,11 +44,27 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
         sInstance = this;
+        cachePath = Objects.requireNonNull(getExternalCacheDir()).getAbsolutePath();
         registerActivityLifecycleCallbacks(getActivityLifecycleCallbacks());
+
+        Configuration config = new Configuration.Builder()
+                .chunkSize(512 * 1024)        // 分片上传时，每片的大小。 默认256K
+                .putThreshhold(1024 * 1024)   // 启用分片上传阀值。默认512K
+                .connectTimeout(10)           // 链接超时。默认10秒
+                .useHttps(true)               // 是否使用https上传域名
+                .responseTimeout(60)          // 服务器响应超时。默认60秒
+                .zone(FixedZone.zone1)        // 设置区域，指定不同区域的上传域名、备用域名、备用IP。
+                .build();
+
+        uploadManager = new UploadManager(config);
     }
 
     public static App getInstance() {
         return sInstance;
+    }
+
+    public UploadManager getUploadManager(){
+        return uploadManager;
     }
 
     public ActivityLifecycleCallbacks getActivityLifecycleCallbacks() {
@@ -129,6 +155,10 @@ public class App extends Application {
         removeAllActivity();
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+    }
+
+    public String getCachePath(){
+        return cachePath;
     }
 
 }

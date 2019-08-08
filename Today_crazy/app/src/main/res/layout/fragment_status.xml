@@ -1,0 +1,189 @@
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.nequer.android.business.manage.mvp.view.Fragment.StatusFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            app:cardCornerRadius="8dp"
+            android:elevation="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp">
+
+            <RelativeLayout
+                android:id="@+id/fragment_status_background"
+                android:background="@drawable/ic_season"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+               <android.support.v7.widget.CardView
+                   android:layout_centerVertical="true"
+                   android:layout_centerHorizontal="true"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   app:cardCornerRadius="8dp">
+                   <ImageView
+                       android:id="@+id/fragment_status_imag_upload"
+                       android:layout_width="200dp"
+                       android:layout_height="200dp"
+                       android:layout_centerVertical="true"
+                       android:layout_centerHorizontal="true"
+                       android:src="@drawable/ic_launcher_background"/>
+               </android.support.v7.widget.CardView>
+
+            </RelativeLayout>
+
+
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            app:cardCornerRadius="8dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/fragment_status_relative_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:elevation="6dp">
+                    <TextView
+                        android:id="@+id/fragment_status_tv_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="日历标题:"
+                        android:textColor="@color/primary_dark"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="18sp"
+                        android:typeface="monospace"/>
+                    <EditText
+                        android:background="@null"
+                        android:id="@+id/fragment_status_edt_title"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="请输入日历标题"
+                        android:layout_centerVertical="true"
+                        android:maxLength="20"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:elevation="6dp"
+                    android:layout_below="@+id/fragment_status_relative_title"
+                    android:id="@+id/fragment_status_relative_good_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp">
+
+                    <TextView
+                        android:id="@+id/fragment_status_tv_good_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="每日适宜的个数："
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="18sp"
+                        android:textColor="@color/primary_dark"/>
+
+
+                    <com.nequer.android.widget.PlusView
+                        android:id="@+id/fragment_status_good_pick"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </com.nequer.android.widget.PlusView>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_below="@+id/fragment_status_relative_good_number"
+                    android:id="@+id/fragment_status_relative_bad_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:elevation="6dp">
+
+                    <TextView
+                        android:id="@+id/fragment_status_tv_bad_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="每日不宜的个数："
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="18sp"
+                        android:textColor="@color/primary_dark"/>
+
+
+                    <com.nequer.android.widget.PlusView
+                        android:id="@+id/fragment_status_bad_pick"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </com.nequer.android.widget.PlusView>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="8dp"
+            android:elevation="8dp"
+            >
+            <RelativeLayout
+                android:layout_margin="6dp"
+                android:background="@drawable/bg_btn_subscribe_selected"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/fragment_status_tv_describe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="日历描述："
+                    android:layout_margin="16dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/primary_dark"/>
+
+                <EditText
+                    android:id="@+id/fragment_status_edt_describe"
+                    android:layout_below="@id/fragment_status_tv_describe"
+                    android:hint="输入您对日历的描述"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

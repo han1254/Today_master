@@ -29,6 +29,7 @@ public class MySubscribeAdapter extends BaseRecyclerViewAdapter<CalendarModel> {
 
     @Override
     protected void bindView(BaseViewHolder viewHolder, CalendarModel item) {
+
         viewHolder.setImgUrl(R.id.item_mysubscribe_imag,item.getCalendarPicture())
                 .setText(R.id.item_mysubscribe_txt_calendar_title,item.getCalendarName());
         viewHolder.getItemView().setOnClickListener(new View.OnClickListener() {
@@ -42,7 +43,7 @@ public class MySubscribeAdapter extends BaseRecyclerViewAdapter<CalendarModel> {
         linearCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mOnCancelClickListener.onCancelClickItem(item.getCalendarId());
+                mOnCancelClickListener.onCancelClickItem(item.getCalendarId(),viewHolder.getViewHolderPosition());
             }
         });
 
@@ -54,7 +55,7 @@ public class MySubscribeAdapter extends BaseRecyclerViewAdapter<CalendarModel> {
     }
 
     public interface onCancelListener{
-        void onCancelClickItem(int id);
+        void onCancelClickItem(int id,int position);
     }
 
     public void setOnItemClickListener(onItemClickListener listener){

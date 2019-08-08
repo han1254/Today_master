@@ -15,11 +15,20 @@ public class MyCreatePresenter extends BasePresenter<IMyCreateContract.View> imp
         ManagerHelper.getManagerHelper().getMyCreate(this);
     }
 
+    @Override
+    public void deleteCalendar(int id) {
+        ManagerHelper.getManagerHelper().deleteCalendar(id,this);
+    }
+
     public void getCreateSucceed(List<MyCreateModel> list){
 
         mView.onGetCreateSucceed(list);
     }
 
     public void getCreateFailed(){
+    }
+
+    public void onDeleteSucceed(Long data){
+        mView.onDeleteSucceed(data);
     }
 }

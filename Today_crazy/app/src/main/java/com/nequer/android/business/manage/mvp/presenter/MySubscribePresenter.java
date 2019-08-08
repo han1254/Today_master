@@ -13,7 +13,16 @@ public class MySubscribePresenter extends BasePresenter<IMySubscribeContract.Vie
         ManagerHelper.getManagerHelper().getMySubscribe(this);
     }
 
+    @Override
+    public void unSubscribe(int id) {
+        ManagerHelper.getManagerHelper().unSubscribe(this,id);
+    }
+
     public void onSucceed(List<CalendarModel> list){
         mView.onGetSubscribeSucceed(list);
+    }
+
+    public void onUnSubscribeSucceed(){
+        mView.onUnSubscribeSucceed();
     }
 }

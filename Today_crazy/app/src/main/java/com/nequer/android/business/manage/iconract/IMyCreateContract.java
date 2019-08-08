@@ -10,10 +10,13 @@ public interface IMyCreateContract {
 
         void onGetCreateSucceed(List<MyCreateModel> list);
         void onGetCreateFailed();
+
+        void onDeleteSucceed(Long data);
     }
 
     interface Presenter extends IBaseContract.IBasePresenter{
 
         void getCreate();
+        void deleteCalendar(int id);
     }
 }

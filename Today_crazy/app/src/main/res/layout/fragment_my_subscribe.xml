@@ -4,11 +4,16 @@
     android:layout_height="match_parent"
     tools:context="com.nequer.android.business.manage.mvp.view.Fragment.MySubscribeFragment">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/fragment_mysubscribe_recycler"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+   <android.support.v4.widget.SwipeRefreshLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:id="@+id/fragment_mysubscribe_refresh">
+       <android.support.v7.widget.RecyclerView
+           android:id="@+id/fragment_mysubscribe_recycler"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
 
-    </android.support.v7.widget.RecyclerView>
+       </android.support.v7.widget.RecyclerView>
 
+   </android.support.v4.widget.SwipeRefreshLayout>
 </RelativeLayout>

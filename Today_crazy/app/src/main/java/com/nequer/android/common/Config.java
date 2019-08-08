@@ -1,5 +1,7 @@
 package com.nequer.android.common;
 
+import android.Manifest;
+
 public class Config {
     /**
      * 设置BaseURL
@@ -15,4 +17,18 @@ public class Config {
     public static final int[] NET_CORRECT_CODE = {0};
 
     public static final String CALENDAR = "calendar";
+
+    //today FileProvider
+    public static String FILE_PROVIDER = "com.today.android.fileprovider";
+    /**
+     * 图片&视频选择请求码
+     **/
+    public static int REQUEST_CODE_CHOOSE = 100;
+
+    /**
+     * 权限
+     */
+    public static String[] REQUEST_PERMISSIONS = {Manifest.permission.READ_EXTERNAL_STORAGE,
+            Manifest.permission.WRITE_EXTERNAL_STORAGE,
+            Manifest.permission.CAMERA};
 }

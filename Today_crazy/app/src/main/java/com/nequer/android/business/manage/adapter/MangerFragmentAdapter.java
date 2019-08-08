@@ -20,6 +20,7 @@ public class MangerFragmentAdapter extends FragmentPagerAdapter {
     private MySubscribeFragment subscribeFragment = new MySubscribeFragment();
     private MyCreateFragment createFragment = new MyCreateFragment();
     private List<AbsBaseFragment> fragmentLists = new ArrayList<>();
+    private Fragment fragment;
     private String[] titles = {"我创建的","我订阅的"};
 
     public MangerFragmentAdapter(FragmentManager fm) {
@@ -35,7 +36,28 @@ public class MangerFragmentAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int i) {
-        return fragmentLists.get(i);
+        switch(i){
+            case 0:
+                try {
+                    fragment = MyCreateFragment.class.newInstance();
+                } catch (IllegalAccessException e) {
+                    e.printStackTrace();
+                } catch (InstantiationException e) {
+                    e.printStackTrace();
+                }
+                break;
+            case 1:
+                try {
+                    fragment = MySubscribeFragment.class.newInstance();
+                } catch (IllegalAccessException e) {
+                    e.printStackTrace();
+                } catch (InstantiationException e) {
+                    e.printStackTrace();
+                }
+                break;
+        }
+
+        return fragment;
     }
 
     @Override
